@@ -1,0 +1,48 @@
+/*
+    id선택자, class선택자, tag선택자 순으로 정렬된다. 같은 선택자라면 마지막에 등장하는 선택자가 우선이다.
+    왜, id가 가장 우선순위가 높을까?
+    id선택자: id선택자는 페이지에서 중복되지 않는다.
+    class선택자: class선택자는 중복이 허용된다.
+*/
+body {
+    margin:0;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+h1 {
+   font-size:60px;
+   text-align: center;
+   border-bottom:1px solid gray;
+   margin:0px;
+   padding:20px;
+}
+ol {
+   border-right: 1px solid gray;
+   width:100px;
+   margin:0px;
+   padding:20px;
+}
+#grid {
+    display:grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol {
+    padding-left:33px;
+}
+#grid #article{
+    padding-left: 25px;
+}
+@media(max-width:500px) {
+    #grid {
+      display:block;
+    }
+    h1 {
+        border-bottom: none;;
+    }
+    ol {
+        border-right: none;
+    }
+
+}
